@@ -84,7 +84,7 @@ export default function HomePage() {
       />
 
       <div className="flex flex-col">
-        <h1>Veeville. Experiences</h1>
+        <h1>Veeville. Experiences coming soon</h1>
       </div>
     </>
   );
