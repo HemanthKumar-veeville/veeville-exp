@@ -26,10 +26,10 @@ export const metadata: Metadata = {
     title: "Welcome to Excellence - Veeville.",
     description:
       "Discover excellence with our innovative solutions. We provide top-tier services and products designed to elevate your business to new heights.",
-    url: "https://yourwebsite.com",
+    url: "https://www.veevillexp.com",
   },
   alternates: {
-    canonical: "https://yourwebsite.com",
+    canonical: "https://www.veevillexp.com",
   },
 };
 
@@ -73,7 +73,7 @@ export default function HomePage() {
             name: "Welcome to Excellence - Veeville.",
             description:
               "Discover excellence with our innovative solutions. We provide top-tier services and products designed to elevate your business to new heights.",
-            url: "https://yourwebsite.com",
+            url: "https://www.veevillexp.com",
             mainEntity: {
               "@type": "Organization",
               name: "Veeville.",

@@ -13,7 +13,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://yourwebsite.com"),
+  metadataBase: new URL("https://www.veevillexp.com"),
   title: {
     default: "Veeville. - Welcome to Excellence",
     template: "%s | Veeville.",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://yourwebsite.com",
+    url: "https://www.veevillexp.com",
     siteName: "Veeville.",
     title: "Veeville. - Welcome to Excellence",
     description:
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     yandex: "your-yandex-verification-code",
   },
   alternates: {
-    canonical: "https://yourwebsite.com",
+    canonical: "https://www.veevillexp.com",
   },
   generator: "v0.dev",
 };
@@ -110,8 +110,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "Veeville.",
-              url: "https://yourwebsite.com",
-              logo: "https://yourwebsite.com/logo.png",
+              url: "https://www.veevillexp.com",
+              logo: "https://www.veevillexp.com/logo.png",
               description:
                 "Discover excellence with our innovative solutions. We provide top-tier services and products designed to elevate your business to new heights.",
               address: {
