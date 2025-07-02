@@ -1,29 +1,17 @@
 import type { Metadata } from "next";
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import {
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Users,
-  Zap,
-  Shield,
-} from "lucide-react";
-import Link from "next/link";
+import { HeroSection } from "@/components/sections/hero-section";
+import { ExperiencesSection } from "@/components/sections/experiences-section";
+import { AboutSection } from "@/components/sections/about-section";
+import { ContactSection } from "@/components/sections/contact-section";
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "Welcome to Excellence - Veeville.",
+  title: "Veeville Experiences - Welcome to Excellence",
   description:
     "Discover excellence with our innovative solutions. We provide top-tier services and products designed to elevate your business to new heights.",
   openGraph: {
-    title: "Welcome to Excellence - Veeville.",
+    title: "Veeville Experiences - Welcome to Excellence",
     description:
       "Discover excellence with our innovative solutions. We provide top-tier services and products designed to elevate your business to new heights.",
     url: "https://www.veevillexp.com",
@@ -33,59 +21,17 @@ export const metadata: Metadata = {
   },
 };
 
-const features = [
-  {
-    icon: Zap,
-    title: "Lightning Fast",
-    description:
-      "Experience blazing-fast performance with our optimized solutions.",
-  },
-  {
-    icon: Shield,
-    title: "Secure & Reliable",
-    description:
-      "Your data is protected with enterprise-grade security measures.",
-  },
-  {
-    icon: Users,
-    title: "Expert Support",
-    description: "Get help from our team of experienced professionals 24/7.",
-  },
-];
-
-const benefits = [
-  "Increase productivity by up to 300%",
-  "Reduce operational costs significantly",
-  "Scale your business effortlessly",
-  "Access premium features and tools",
-];
-
 export default function HomePage() {
   return (
     <>
-      {/* Structured Data for Homepage */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            name: "Welcome to Excellence - Veeville.",
-            description:
-              "Discover excellence with our innovative solutions. We provide top-tier services and products designed to elevate your business to new heights.",
-            url: "https://www.veevillexp.com",
-            mainEntity: {
-              "@type": "Organization",
-              name: "Veeville.",
-              description: "Excellence in innovation and business solutions",
-            },
-          }),
-        }}
-      />
-
-      <div className="flex flex-col">
-        <h1>Veeville. Experiences coming soon</h1>
-      </div>
+      <Navbar />
+      <main className="min-h-screen">
+        <HeroSection />
+        <ExperiencesSection />
+        <AboutSection />
+        <ContactSection />
+      </main>
+      <Footer />
     </>
   );
 }
