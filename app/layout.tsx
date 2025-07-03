@@ -1,22 +1,27 @@
 import type React from "react";
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
-import { Navbar } from "@/components/navbar";
-import { Footer } from "@/components/footer";
 import { ThemeProvider } from "@/components/theme-provider";
 
-const montserrat = Montserrat({
+const inter = Inter({
   subsets: ["latin"],
   display: "swap",
-  fallback: ["Helvetica", "Arial", "sans-serif"],
+  variable: "--font-inter",
+});
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-poppins",
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.veevillexp.com"),
   title: {
-    default: "Veeville. - Welcome to Excellence",
-    template: "%s | Veeville.",
+    default: "Veeville Experiences - Welcome to Excellence",
+    template: "%s | Veeville Experiences",
   },
   description:
     "Discover excellence with our innovative solutions. We provide top-tier services and products designed to elevate your business to new heights.",
@@ -26,10 +31,11 @@ export const metadata: Metadata = {
     "excellence",
     "professional services",
     "technology",
+    "experiences",
   ],
-  authors: [{ name: "Veeville. Team" }],
-  creator: "Veeville.",
-  publisher: "Veeville.",
+  authors: [{ name: "Veeville Experiences Team" }],
+  creator: "Veeville Experiences",
+  publisher: "Veeville Experiences",
   robots: {
     index: true,
     follow: true,
@@ -45,8 +51,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://www.veevillexp.com",
-    siteName: "Veeville.",
-    title: "Veeville. - Welcome to Excellence",
+    siteName: "Veeville Experiences",
+    title: "Veeville Experiences - Welcome to Excellence",
     description:
       "Discover excellence with our innovative solutions. We provide top-tier services and products designed to elevate your business to new heights.",
     images: [
@@ -54,16 +60,16 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Veeville. - Excellence in Innovation",
+        alt: "Veeville Experiences - Excellence in Innovation",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Veeville. - Welcome to Excellence",
+    title: "Veeville Experiences - Welcome to Excellence",
     description: "Discover excellence with our innovative solutions.",
     images: ["/og-image.jpg"],
-    creator: "@yourcompany",
+    creator: "@veevillexp",
   },
   verification: {
     google: "your-google-verification-code",
@@ -81,7 +87,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${poppins.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" />
         <link
@@ -103,44 +109,18 @@ export default function RootLayout({
         />
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#000000" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              name: "Veeville.",
-              url: "https://www.veevillexp.com",
-              logo: "https://www.veevillexp.com/logo.png",
-              description:
-                "Discover excellence with our innovative solutions. We provide top-tier services and products designed to elevate your business to new heights.",
-              address: {
-                "@type": "PostalAddress",
-                streetAddress: "123 Business Street",
-                addressLocality: "Business City",
-                addressRegion: "BC",
-                postalCode: "12345",
-                addressCountry: "US",
-              },
-              contactPoint: {
-                "@type": "ContactPoint",
-                telephone: "+1-555-123-4567",
-                contactType: "customer service",
-                availableLanguage: "English",
-              },
-              sameAs: [
-                "https://twitter.com/yourcompany",
-                "https://linkedin.com/company/yourcompany",
-                "https://facebook.com/yourcompany",
-              ],
-            }),
-          }}
-        />
       </head>
-      <body className={montserrat.className}>
-        <div className="flex min-h-screen flex-col">
-          <main className="flex-1">{children}</main>
-        </div>
+      <body className={`${inter.className} antialiased`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem={false}
+          disableTransitionOnChange
+        >
+          <div className="flex min-h-screen flex-col">
+            {children}
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

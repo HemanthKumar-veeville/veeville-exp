@@ -22,11 +22,11 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
 export const metadata: Metadata = {
-  title: "Welcome to Excellence - Veeville.",
+  title: "Veeville Experiences - Welcome to Excellence",
   description:
     "Discover excellence with our innovative solutions. We provide top-tier services and products designed to elevate your business to new heights.",
   openGraph: {
-    title: "Welcome to Excellence - Veeville.",
+    title: "Veeville Experiences - Welcome to Excellence",
     description:
       "Discover excellence with our innovative solutions. We provide top-tier services and products designed to elevate your business to new heights.",
     url: "https://www.veevillexp.com",
