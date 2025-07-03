@@ -20,6 +20,11 @@ import {
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import {
+  FaSquareFacebook,
+  FaSquareInstagram,
+  FaSquareTwitter,
+} from "react-icons/fa6";
 
 export const metadata: Metadata = {
   title: "Veeville Experiences - Welcome to Excellence",
@@ -168,14 +173,14 @@ const HeroSection = () => (
     <div className="absolute w-full h-full bg-[#7bcdec]" />
     <div className="relative z-10 px-4 sm:px-6 lg:px-0">
       <blockquote className="absolute w-full max-w-[280px] sm:max-w-[600px] lg:max-w-[1307px] top-[60px] sm:top-[80px] lg:top-[111px] left-1/2 transform -translate-x-1/2 lg:left-[43px] lg:transform-none [font-family:'Georgia-Regular',Helvetica] font-normal text-black text-[24px] sm:text-[60px] lg:text-[145px] text-center tracking-[-1.2px] sm:tracking-[-3px] lg:tracking-[-7.25px] leading-[28px] sm:leading-[66px] lg:leading-[159.5px]">
-        &#34;It took me four years to paint like Raphael, but a lifetime to paint
-        like a child.&#34;
+        &#34;It took me four years to paint like Raphael, but a lifetime to
+        paint like a child.&#34;
       </blockquote>
       <cite className="absolute top-[400px] sm:top-[500px] lg:top-[727px] right-4 sm:right-8 lg:right-[307px] [font-family:'Georgia-Regular',Helvetica] font-normal text-black text-[16px] sm:text-[24px] lg:text-[32px] text-center tracking-[-0.8px] sm:tracking-[-1.2px] lg:tracking-[-1.60px] leading-[18px] sm:leading-[26px] lg:leading-[35.2px]">
         -Pablo Picasso
       </cite>
     </div>
-    
+
     {/* Decorative elements - hidden on mobile for cleaner look */}
     <img
       className="hidden lg:block absolute w-[181px] h-[124px] top-[203px] left-[46px]"
@@ -192,7 +197,7 @@ const HeroSection = () => (
       alt="Group"
       src="/img/group-3.png"
     />
-    
+
     {/* Small decorative elements - scaled for mobile */}
     <img
       className="absolute w-[30px] sm:w-[40px] lg:w-[51px] h-[32px] sm:h-[42px] lg:h-[53px] top-[500px] sm:top-[550px] lg:top-[607px] left-[20px] sm:left-[40px] lg:left-[261px]"
@@ -234,7 +239,7 @@ const YellowCardSection = () => (
               src="/img/layer-1-2.svg"
             />
           </div>
-          
+
           {/* Content */}
           <div className="flex-1 lg:ml-[350px] lg:mt-[80px]">
             <div className="mb-4 lg:mb-8 [font-family:'Helvetica-Light',Helvetica] font-light text-[#e03258] text-[18px] sm:text-[22px] lg:text-[27px] tracking-[-0.5px] sm:tracking-[-0.65px] lg:tracking-[-0.81px] leading-[22px] sm:leading-[26px] lg:leading-[29.7px] text-center lg:text-left">
@@ -242,13 +247,13 @@ const YellowCardSection = () => (
             </div>
             <div className="[font-family:'Helvetica-Light',Helvetica] font-light text-black text-[20px] sm:text-[26px] lg:text-[32px] tracking-[-0.6px] sm:tracking-[-0.8px] lg:tracking-[-0.96px] leading-[24px] sm:leading-[30px] lg:leading-[35.2px] text-center lg:text-left">
               You never learn better than when you don&#39;t know that you are
-              learning. Through play, touch, wonder, and experimentation, we help
-              teams unlearn biases, collaborate organically, and see challenges with
-              fresh eyes.
+              learning. Through play, touch, wonder, and experimentation, we
+              help teams unlearn biases, collaborate organically, and see
+              challenges with fresh eyes.
             </div>
           </div>
         </div>
-        
+
         {/* Decorative elements - hidden on mobile */}
         <div className="hidden lg:block">
           {Array.from({ length: 5 }).map((_, index) => (
@@ -287,7 +292,10 @@ const PromiseSection = () => (
     </h2>
     <div className="flex flex-col lg:flex-row justify-between gap-8 lg:gap-4">
       {promiseItems.map((item, index) => (
-        <div key={`promise-${index}`} className="flex flex-col max-w-full lg:max-w-[395px]">
+        <div
+          key={`promise-${index}`}
+          className="flex flex-col max-w-full lg:max-w-[395px]"
+        >
           <div className="flex items-center mb-4">
             <img
               className="w-[28px] sm:w-[33px] lg:w-[38px] h-[28px] sm:h-[33px] lg:h-[38px]"
@@ -308,7 +316,7 @@ const PromiseSection = () => (
           <p className="[font-family:'Helvetica_Neue-Light',Helvetica] font-light text-[#465666] text-[18px] sm:text-[21px] lg:text-[25px] tracking-[0] leading-[normal] mb-4">
             {item.description}
           </p>
-          
+
           {/* Decorative illustrations - simplified for mobile */}
           {index === 0 && (
             <div className="relative w-[80px] sm:w-[100px] lg:w-[120px] h-[90px] sm:h-[110px] lg:h-[131px] ml-auto">
@@ -332,7 +340,7 @@ const PromiseSection = () => (
               </div>
             </div>
           )}
-          
+
           {index === 1 && (
             <div className="relative w-[60px] sm:w-[70px] lg:w-[82px] h-[90px] sm:h-[110px] lg:h-[133px] ml-auto">
               <img
@@ -355,7 +363,7 @@ const PromiseSection = () => (
               </div>
             </div>
           )}
-          
+
           {index === 2 && (
             <div className="relative w-[120px] sm:w-[140px] lg:w-[167px] h-[95px] sm:h-[115px] lg:h-[137px] ml-auto">
               <img
@@ -572,12 +580,12 @@ const ExperienceMenuSection = () => (
                 </div>
               )}
             </div>
-            
+
             {/* Title text - responsive positioning */}
             <div className="w-full max-w-[320px] sm:max-w-[350px] lg:max-w-[362px] px-2 text-white text-[16px] sm:text-[20px] lg:text-[25px] text-center tracking-[-0.5px] sm:tracking-[-0.6px] lg:tracking-[-0.75px] leading-[20px] sm:leading-[24px] lg:leading-[27.5px] [font-family:'Helvetica-Light',Helvetica] font-light mb-4 lg:mb-0">
               {card.title}
             </div>
-            
+
             {/* Bottom image - responsive sizing and positioning */}
             <div className="flex-shrink-0 w-full flex justify-center">
               <img
@@ -595,7 +603,7 @@ const ExperienceMenuSection = () => (
 
 const ContactFormSection = () => (
   <section className="w-full mt-[60px] sm:mt-[80px] lg:mt-[100px] bg-[#3498db] pt-[30px] sm:pt-[40px] lg:pt-[52px] pb-[30px] sm:pb-[40px] lg:pb-[52px] relative">
-    <div className="mx-4 sm:mx-8 lg:mx-[68px]">
+    <div className="mx-4 sm:mx-8 lg:mx-[68px] mb-10">
       <h2 className="w-full max-w-[800px] [font-family:'Georgia-Regular',Helvetica] font-normal text-white text-[32px] sm:text-[48px] lg:text-6xl tracking-[-1px] sm:tracking-[-1.4px] lg:tracking-[-1.80px] leading-[36px] sm:leading-[52px] lg:leading-[66.0px] mb-4 lg:mb-0">
         Ready to Rediscover Wonder?
       </h2>
@@ -644,7 +652,7 @@ const ContactFormSection = () => (
             alt="Mask group"
             src="/img/mask-group.png"
           />
-          
+
           {/* Decorative elements - simplified for mobile */}
           <div className="absolute w-[150px] sm:w-[175px] lg:w-[201px] h-[140px] sm:h-[160px] lg:h-[187px] bottom-0 right-0">
             <img
@@ -674,7 +682,7 @@ const ContactFormSection = () => (
         </div>
       </div>
     </div>
-    
+
     {/* Footer */}
     <footer className="absolute bottom-0 left-0 w-full">
       <div className="w-full h-auto lg:h-[52px] bg-white flex flex-col lg:flex-row items-center py-3 lg:py-0">
@@ -702,27 +710,25 @@ const ContactFormSection = () => (
             </a>
           </div>
           <div className="flex items-center">
-            <img
-              className="w-[24px] sm:w-[27px] lg:w-[30px] h-[25px] sm:h-[28px] lg:h-[31px]"
-              alt="Group"
-              src="/img/group-7.png"
-            />
-            <div className="ml-4 lg:ml-6 flex">
-              <img
-                className="w-[5px] sm:w-[6px] lg:w-[7px] h-[5px] sm:h-[6px] lg:h-[7px]"
-                alt="Vector"
-                src="/img/vector-76.svg"
-              />
-              <img
-                className="w-[5px] sm:w-[6px] lg:w-[7px] h-[16px] sm:h-[19px] lg:h-[22px] mt-1.5 lg:mt-2"
-                alt="Vector"
-                src="/img/vector-77.svg"
-              />
-              <img
-                className="w-[16px] sm:w-[19px] lg:w-[22px] h-[16px] sm:h-[19px] lg:h-[22px] mt-1.5 lg:mt-2"
-                alt="Vector"
-                src="/img/vector-78.svg"
-              />
+            <div className="flex items-center gap-3 sm:gap-4 lg:gap-5">
+              <Link
+                href="https://www.facebook.com/veevillexp"
+                className="text-[#465666] hover:text-[#3498db] transition-colors duration-200"
+              >
+                <FaSquareFacebook className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />
+              </Link>
+              <Link
+                href="https://www.instagram.com/veevillexp"
+                className="text-[#465666] hover:text-[#3498db] transition-colors duration-200"
+              >
+                <FaSquareInstagram className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />
+              </Link>
+              <Link
+                href="https://www.twitter.com/veevillexp"
+                className="text-[#465666] hover:text-[#3498db] transition-colors duration-200"
+              >
+                <FaSquareTwitter className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />
+              </Link>
             </div>
           </div>
         </div>
