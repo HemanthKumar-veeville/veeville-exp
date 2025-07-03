@@ -16,6 +16,15 @@ import {
   Users,
   Zap,
   Shield,
+  Mail,
+  Phone,
+  MapPin,
+  Globe,
+  Heart,
+  Sparkles,
+  Circle,
+  Square,
+  Triangle,
 } from "lucide-react";
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
@@ -645,37 +654,33 @@ const ContactFormSection = () => (
             src="/img/mask-group.png"
           />
           
-          {/* Decorative elements - simplified for mobile */}
-          <div className="absolute w-[150px] sm:w-[175px] lg:w-[201px] h-[140px] sm:h-[160px] lg:h-[187px] bottom-0 right-0">
-            <img
-              className="absolute w-[80px] sm:w-[95px] lg:w-[109px] h-[90px] sm:h-[105px] lg:h-[124px] top-0 left-[25px] sm:left-[30px] lg:left-[37px]"
-              alt="Clip path group"
-              src="/img/clip-path-group.png"
-            />
-            {/* Additional decorative elements - hidden on mobile for cleaner look */}
-            <div className="hidden sm:block">
-              <img
-                className="absolute w-[45px] sm:w-[55px] lg:w-[63px] h-[18px] sm:h-[22px] lg:h-[26px] top-[35px] sm:top-[42px] lg:top-14 right-[20px] sm:right-[25px] lg:right-32"
-                alt="Vector"
-                src="/img/vector-1.svg"
-              />
-              <img
-                className="absolute w-[13px] sm:w-[15px] lg:w-[18px] h-[11px] sm:h-[13px] lg:h-4 top-[35px] sm:top-[42px] lg:top-[52px] right-[10px] sm:right-[12px] lg:right-[183px]"
-                alt="Clip path group"
-                src="/img/clip-path-group-1.png"
-              />
-              <img
-                className="absolute w-[40px] sm:w-[47px] lg:w-[55px] h-[35px] sm:h-[42px] lg:h-[50px] top-[18px] sm:top-[22px] lg:top-[27px] left-0"
-                alt="Clip path group"
-                src="/img/clip-path-group-2.png"
-              />
+          {/* Decorative elements with Lucide icons - responsive */}
+          <div className="absolute w-[120px] sm:w-[150px] lg:w-[201px] h-[100px] sm:h-[140px] lg:h-[187px] bottom-0 right-0 flex flex-col items-center justify-center">
+            {/* Main decorative icon */}
+            <div className="flex items-center justify-center mb-2 sm:mb-3 lg:mb-4">
+              <Heart className="w-[40px] sm:w-[60px] lg:w-[80px] h-[40px] sm:h-[60px] lg:h-[80px] text-white/80" />
+            </div>
+            
+            {/* Secondary decorative icons - arranged in a pattern */}
+            <div className="flex items-center justify-center space-x-2 sm:space-x-3 lg:space-x-4 mb-2">
+              <Sparkles className="w-[16px] sm:w-[20px] lg:w-[24px] h-[16px] sm:h-[20px] lg:h-[24px] text-white/60" />
+              <Star className="w-[18px] sm:w-[22px] lg:w-[26px] h-[18px] sm:h-[22px] lg:h-[26px] text-white/70" />
+              <Sparkles className="w-[16px] sm:w-[20px] lg:w-[24px] h-[16px] sm:h-[20px] lg:h-[24px] text-white/60" />
+            </div>
+            
+            {/* Bottom row of small decorative icons */}
+            <div className="flex items-center justify-center space-x-1 sm:space-x-2 lg:space-x-3">
+              <Circle className="w-[12px] sm:w-[14px] lg:w-[16px] h-[12px] sm:h-[14px] lg:h-[16px] text-white/50" />
+              <Square className="w-[10px] sm:w-[12px] lg:w-[14px] h-[10px] sm:h-[12px] lg:h-[14px] text-white/40" />
+              <Triangle className="w-[12px] sm:w-[14px] lg:w-[16px] h-[12px] sm:h-[14px] lg:h-[16px] text-white/50" />
+              <Circle className="w-[8px] sm:w-[10px] lg:w-[12px] h-[8px] sm:h-[10px] lg:h-[12px] text-white/30" />
             </div>
           </div>
         </div>
       </div>
     </div>
     
-    {/* Footer */}
+    {/* Footer with Lucide React Icons */}
     <footer className="absolute bottom-0 left-0 w-full">
       <div className="w-full h-auto lg:h-[52px] bg-white flex flex-col lg:flex-row items-center py-3 lg:py-0">
         <div className="mx-4 sm:mx-8 lg:mx-[67px] flex flex-col lg:flex-row justify-between items-center w-full gap-4 lg:gap-0">
@@ -687,7 +692,7 @@ const ContactFormSection = () => (
               href="mailto:getpersonal@veeville.com"
               rel="noopener noreferrer"
               target="_blank"
-              className="tracking-[-0.11px] underline"
+              className="tracking-[-0.11px] underline hover:text-blue-600 transition-colors"
             >
               getpersonal@veeville.com
             </a>
@@ -696,33 +701,24 @@ const ContactFormSection = () => (
               href="http://veevillexp.com"
               rel="noopener noreferrer"
               target="_blank"
-              className="tracking-[-0.11px] underline"
+              className="tracking-[-0.11px] underline hover:text-blue-600 transition-colors"
             >
               veevillexp.com
             </a>
           </div>
-          <div className="flex items-center">
-            <img
-              className="w-[24px] sm:w-[27px] lg:w-[30px] h-[25px] sm:h-[28px] lg:h-[31px]"
-              alt="Group"
-              src="/img/group-7.png"
-            />
-            <div className="ml-4 lg:ml-6 flex">
-              <img
-                className="w-[5px] sm:w-[6px] lg:w-[7px] h-[5px] sm:h-[6px] lg:h-[7px]"
-                alt="Vector"
-                src="/img/vector-76.svg"
-              />
-              <img
-                className="w-[5px] sm:w-[6px] lg:w-[7px] h-[16px] sm:h-[19px] lg:h-[22px] mt-1.5 lg:mt-2"
-                alt="Vector"
-                src="/img/vector-77.svg"
-              />
-              <img
-                className="w-[16px] sm:w-[19px] lg:w-[22px] h-[16px] sm:h-[19px] lg:h-[22px] mt-1.5 lg:mt-2"
-                alt="Vector"
-                src="/img/vector-78.svg"
-              />
+          
+          {/* Footer icons using Lucide React - responsive sizing */}
+          <div className="flex items-center space-x-3 sm:space-x-4 lg:space-x-6">
+            {/* Company logo representation */}
+            <div className="flex items-center justify-center w-[24px] sm:w-[27px] lg:w-[30px] h-[25px] sm:h-[28px] lg:h-[31px] bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg">
+              <Heart className="w-[12px] sm:w-[14px] lg:w-[16px] h-[12px] sm:h-[14px] lg:h-[16px] text-white" />
+            </div>
+            
+            {/* Decorative icons */}
+            <div className="flex items-center space-x-1 sm:space-x-2 lg:space-x-3">
+              <Circle className="w-[5px] sm:w-[6px] lg:w-[7px] h-[5px] sm:h-[6px] lg:h-[7px] text-[#465666] fill-current" />
+              <MapPin className="w-[5px] sm:w-[6px] lg:w-[7px] h-[16px] sm:h-[19px] lg:h-[22px] text-[#465666]" />
+              <Globe className="w-[16px] sm:w-[19px] lg:w-[22px] h-[16px] sm:h-[19px] lg:h-[22px] text-[#465666]" />
             </div>
           </div>
         </div>
