@@ -16,15 +16,8 @@ import {
   Users,
   Zap,
   Shield,
-  Mail,
-  Phone,
-  MapPin,
-  Globe,
-  Heart,
-  Sparkles,
-  Circle,
-  Square,
-  Triangle,
+  Instagram,
+  Linkedin,
 } from "lucide-react";
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
@@ -653,34 +646,68 @@ const ContactFormSection = () => (
             alt="Mask group"
             src="/img/mask-group.png"
           />
-          
-          {/* Decorative elements with Lucide icons - responsive */}
-          <div className="absolute w-[120px] sm:w-[150px] lg:w-[201px] h-[100px] sm:h-[140px] lg:h-[187px] bottom-0 right-0 flex flex-col items-center justify-center">
-            {/* Main decorative icon */}
-            <div className="flex items-center justify-center mb-2 sm:mb-3 lg:mb-4">
-              <Heart className="w-[40px] sm:w-[60px] lg:w-[80px] h-[40px] sm:h-[60px] lg:h-[80px] text-white/80" />
-            </div>
-            
-            {/* Secondary decorative icons - arranged in a pattern */}
-            <div className="flex items-center justify-center space-x-2 sm:space-x-3 lg:space-x-4 mb-2">
-              <Sparkles className="w-[16px] sm:w-[20px] lg:w-[24px] h-[16px] sm:h-[20px] lg:h-[24px] text-white/60" />
-              <Star className="w-[18px] sm:w-[22px] lg:w-[26px] h-[18px] sm:h-[22px] lg:h-[26px] text-white/70" />
-              <Sparkles className="w-[16px] sm:w-[20px] lg:w-[24px] h-[16px] sm:h-[20px] lg:h-[24px] text-white/60" />
-            </div>
-            
-            {/* Bottom row of small decorative icons */}
-            <div className="flex items-center justify-center space-x-1 sm:space-x-2 lg:space-x-3">
-              <Circle className="w-[12px] sm:w-[14px] lg:w-[16px] h-[12px] sm:h-[14px] lg:h-[16px] text-white/50" />
-              <Square className="w-[10px] sm:w-[12px] lg:w-[14px] h-[10px] sm:h-[12px] lg:h-[14px] text-white/40" />
-              <Triangle className="w-[12px] sm:w-[14px] lg:w-[16px] h-[12px] sm:h-[14px] lg:h-[16px] text-white/50" />
-              <Circle className="w-[8px] sm:w-[10px] lg:w-[12px] h-[8px] sm:h-[10px] lg:h-[12px] text-white/30" />
-            </div>
+          <div className="absolute w-[120px] sm:w-[150px] lg:w-[201px] h-[100px] sm:h-[140px] lg:h-[187px] bottom-0 right-0">
+            <img
+              className="absolute w-[70px] sm:w-[85px] lg:w-[109px] h-[80px] sm:h-[95px] lg:h-[124px] top-0 left-[25px] sm:left-[30px] lg:left-[37px]"
+              alt="Clip path group"
+              src="/img/clip-path-group.png"
+            />
+            <img
+              className="absolute w-[40px] sm:w-[50px] lg:w-[63px] h-[16px] sm:h-[20px] lg:h-[26px] top-[35px] sm:top-[42px] lg:top-14 left-[80px] sm:left-[95px] lg:left-32"
+              alt="Vector"
+              src="/img/vector-1.svg"
+            />
+            <img
+              className="absolute w-[12px] sm:w-[14px] lg:w-[18px] h-[10px] sm:h-[12px] lg:h-4 top-[40px] sm:top-[47px] lg:top-[52px] left-[140px] sm:left-[165px] lg:left-[183px]"
+              alt="Clip path group"
+              src="/img/clip-path-group-1.png"
+            />
+            <img
+              className="absolute w-[35px] sm:w-[44px] lg:w-[55px] h-[32px] sm:h-[40px] lg:h-[50px] top-[17px] sm:top-[21px] lg:top-[27px] left-0"
+              alt="Clip path group"
+              src="/img/clip-path-group-2.png"
+            />
+            <img
+              className="absolute w-[9px] sm:w-[11px] lg:w-3.5 h-[48px] sm:h-[60px] lg:h-[76px] top-[70px] sm:top-[88px] lg:top-[111px] left-[50px] sm:left-[62px] lg:left-[78px]"
+              alt="Clip path group"
+              src="/img/clip-path-group-3.png"
+            />
+            <img
+              className="absolute w-[24px] sm:w-[30px] lg:w-12 h-[40px] sm:h-[50px] lg:h-[62px] top-[72px] sm:top-[90px] lg:top-[113px] left-[70px] sm:left-[86px] lg:left-[108px]"
+              alt="Vector"
+              src="/img/vector-2-2.svg"
+            />
+            <img
+              className="absolute w-[12px] sm:w-[14px] lg:w-[18px] h-[15px] sm:h-[18px] lg:h-[23px] top-[37px] sm:top-[46px] lg:top-[58px] left-[63px] sm:left-[78px] lg:left-[98px]"
+              alt="Vector"
+              src="/img/vector-3-2.svg"
+            />
+            <img
+              className="absolute w-[13px] sm:w-[16px] lg:w-5 h-[16px] sm:h-[20px] lg:h-[25px] top-[38px] sm:top-[47px] lg:top-[59px] left-[47px] sm:left-[58px] lg:left-[73px]"
+              alt="Vector"
+              src="/img/vector-10.svg"
+            />
+            <img
+              className="absolute w-[25px] sm:w-[31px] lg:w-[39px] h-[12px] sm:h-[15px] lg:h-[19px] top-[56px] sm:top-[70px] lg:top-[88px] left-[53px] sm:left-[66px] lg:left-[83px]"
+              alt="Vector"
+              src="/img/vector-11.svg"
+            />
+            <img
+              className="absolute w-[8px] sm:w-[10px] lg:w-3 h-[8px] sm:h-[10px] lg:h-[13px] top-[40px] sm:top-[50px] lg:top-[63px] left-[49px] sm:left-[61px] lg:left-[76px]"
+              alt="Vector"
+              src="/img/vector-12.svg"
+            />
+            <img
+              className="absolute w-[7px] sm:w-[8px] lg:w-2.5 h-[8px] sm:h-[10px] lg:h-3 top-[40px] sm:top-[50px] lg:top-[63px] left-[64px] sm:left-[80px] lg:left-[100px]"
+              alt="Vector"
+              src="/img/vector-13.svg"
+            />
           </div>
         </div>
       </div>
     </div>
     
-    {/* Footer with Lucide React Icons */}
+    {/* Footer */}
     <footer className="absolute bottom-0 left-0 w-full">
       <div className="w-full h-auto lg:h-[52px] bg-white flex flex-col lg:flex-row items-center py-3 lg:py-0">
         <div className="mx-4 sm:mx-8 lg:mx-[67px] flex flex-col lg:flex-row justify-between items-center w-full gap-4 lg:gap-0">
@@ -706,19 +733,22 @@ const ContactFormSection = () => (
               veevillexp.com
             </a>
           </div>
-          
-          {/* Footer icons using Lucide React - responsive sizing */}
           <div className="flex items-center space-x-3 sm:space-x-4 lg:space-x-6">
-            {/* Company logo representation */}
-            <div className="flex items-center justify-center w-[24px] sm:w-[27px] lg:w-[30px] h-[25px] sm:h-[28px] lg:h-[31px] bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg">
-              <Heart className="w-[12px] sm:w-[14px] lg:w-[16px] h-[12px] sm:h-[14px] lg:h-[16px] text-white" />
-            </div>
-            
-            {/* Decorative icons */}
+            <img
+              className="w-[24px] sm:w-[27px] lg:w-[30px] h-[25px] sm:h-[28px] lg:h-[31px]"
+              alt="Group"
+              src="/img/group-7.png"
+            />
             <div className="flex items-center space-x-1 sm:space-x-2 lg:space-x-3">
-              <Circle className="w-[5px] sm:w-[6px] lg:w-[7px] h-[5px] sm:h-[6px] lg:h-[7px] text-[#465666] fill-current" />
-              <MapPin className="w-[5px] sm:w-[6px] lg:w-[7px] h-[16px] sm:h-[19px] lg:h-[22px] text-[#465666]" />
-              <Globe className="w-[16px] sm:w-[19px] lg:w-[22px] h-[16px] sm:h-[19px] lg:h-[22px] text-[#465666]" />
+              <img
+                className="w-[5px] sm:w-[6px] lg:w-[7px] h-[5px] sm:h-[6px] lg:h-[7px]"
+                alt="Vector"
+                src="/img/vector-76.svg"
+              />
+              {/* Replace Instagram icon with Lucide React Instagram */}
+              <Instagram className="w-[5px] sm:w-[6px] lg:w-[7px] h-[16px] sm:h-[19px] lg:h-[22px] text-[#465666]" />
+              {/* Replace LinkedIn icon with Lucide React LinkedIn */}
+              <Linkedin className="w-[16px] sm:w-[19px] lg:w-[22px] h-[16px] sm:h-[19px] lg:h-[22px] text-[#465666]" />
             </div>
           </div>
         </div>
