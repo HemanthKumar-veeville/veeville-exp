@@ -16,8 +16,6 @@ import {
   Users,
   Zap,
   Shield,
-  Instagram,
-  Linkedin,
 } from "lucide-react";
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
@@ -745,10 +743,16 @@ const ContactFormSection = () => (
                 alt="Vector"
                 src="/img/vector-76.svg"
               />
-              {/* Replace Instagram icon with Lucide React Instagram */}
-              <Instagram className="w-[5px] sm:w-[6px] lg:w-[7px] h-[16px] sm:h-[19px] lg:h-[22px] text-[#465666]" />
-              {/* Replace LinkedIn icon with Lucide React LinkedIn */}
-              <Linkedin className="w-[16px] sm:w-[19px] lg:w-[22px] h-[16px] sm:h-[19px] lg:h-[22px] text-[#465666]" />
+              <img
+                className="w-[5px] sm:w-[6px] lg:w-[7px] h-[16px] sm:h-[19px] lg:h-[22px]"
+                alt="Vector"
+                src="/img/vector-77.svg"
+              />
+              <img
+                className="w-[16px] sm:w-[19px] lg:w-[22px] h-[16px] sm:h-[19px] lg:h-[22px]"
+                alt="Vector"
+                src="/img/vector-78.svg"
+              />
             </div>
           </div>
         </div>
